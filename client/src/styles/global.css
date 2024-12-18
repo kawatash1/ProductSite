@@ -1,0 +1,158 @@
+body {
+    display: grid;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    font-size: 20px;
+    /* font-family: Arial, sans-serif; */
+    background-color: #f5f5f5;
+    color: #6D435A;
+    background-image: url('https://www.psdgraphics.com/wp-content/uploads/2013/09/light-green-waves.jpg');
+    background-size: cover; /* Масштабирование изображения, чтобы оно покрывало весь экран */
+    background-repeat: no-repeat; /* Запретить повторение изображения */
+    background-position: center; /* Центрирование изображения */
+  }
+
+  main {
+    margin-bottom: auto;
+}
+
+  h1 {
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center; /* Выровнять заголовки по центру */
+    margin: 10px; /* Убираем стандартные отступы для более точного контроля */
+    padding: 50px 0; /* Добавляем отступы сверху и снизу */
+    padding-bottom: 10px;
+  }
+h2{
+    font-size: 25px;
+    padding: 0px 100px;
+    padding-top: 50px;
+}
+  main p{
+    font-size: 23px;
+    padding: 0px 100px;
+  }
+header{
+    position: fixed; /* Фиксируем хедер сверху */
+
+    top: 0; /* Прижимаем к верхнему краю */
+    left: 0;
+    width: 100%; /* Хедер на всю ширину */
+    background-color: #df928e9f; /* Цвет полоски */
+    /* color: white; Цвет текста */
+    z-index: 1000; /* Хедер будет поверх остальных элементов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+}
+
+header nav ul li{
+    
+    display: inline-flex;
+    margin-right: 40px;
+
+}
+
+footer{
+    padding-top: 40px;
+}
+footer p{
+    font-size: smaller;
+    color: #150504;
+    padding: 0;
+}
+
+a{
+    color: #6D435A;
+    font-size: 20px;
+    text-decoration: none;
+}
+  
+  ul {
+    
+    display: flex;
+    justify-content: center;
+
+
+  }
+
+
+#Profile p{
+  padding-top: 50px;
+
+}
+
+  
+  /* .Products {
+    
+  } */
+  
+  .product-list {
+    display: grid; /* Список товаров как сетка */
+    grid-template-columns: repeat(3, 1fr); /* 3 товара в строке */
+    gap: 40px; /* Промежуток между элементами */
+    list-style: none; /* Убираем точки у списка */
+    margin: 0;
+    padding: 0px 140px;
+  }
+  
+  .product-list li {
+    list-style: none; /* Убираем маркеры */
+    background-color: #f4f4f476;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .product-list li img {
+    /* width: 100%; Картинка занимает всю ширину блока */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  .product-list li span {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px; /* Добавим немного пространства между картинкой и текстом */
+  }
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form{
+    padding-bottom: 200px;
+}
+  form div{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  form div label{
+    padding: 0px 20px;
+  }
+ 
+  input{
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  textarea{
+    font-size: 20px;
+  }
+  
+  button{
+    font-size: 20px;
+  }
+
+  #BackToList{
+    margin-top: 40px;
+  }
