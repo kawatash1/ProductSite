@@ -44,7 +44,7 @@ router.post('/register', async (req, res, next) => {
   }
 });
 
-// 2. Вход пользователя (POST /login)
+// 2. Вход пользователя (POST /api/auth/login)
 router.post('/login', async (req, res, next) => {
   const { error } = loginSchema.validate(req.body);
   if (error) {

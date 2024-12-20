@@ -36,7 +36,7 @@ mongoose.connect(process.env.MONGO_URI)
     console.log(`Connected to database: ${mongoose.connection.name}`);
   });
 
-  app.get('/', (req, res) => {
+  app.use('/', (req, res) => {
     res.send('Hello, World!');
   });
 

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const AdminPanel = () => {
   const [products, setProducts] = useState([]);
   const [newProduct, setNewProduct] = useState({ name: '', price: '', imageUrl: '', category: '' });
-  const [editingProduct, setEditingProduct] = useState(null); // Для редактирования товара
+  const [editingProduct, setEditingProduct] = useState(null); 
 
   useEffect(() => {
     fetchProducts();
@@ -13,7 +13,7 @@ const AdminPanel = () => {
     fetch('http://localhost:5000/api/products')
       .then(res => res.json())
       .then(data => setProducts(data))
-      .catch(err => console.error('Ошибка загрузки:', err));
+      .catch(err => console.error('Loading error:', err));
   };
 
   // Добавить товар
@@ -27,14 +27,14 @@ const AdminPanel = () => {
         fetchProducts();
         setNewProduct({ name: '', price: '', imageUrl: '', category: '' });
       })
-      .catch(err => console.error('Ошибка при добавлении:', err));
+      .catch(err => console.error('Adding error:', err));
   };
 
   // Удалить товар
   const handleDelete = (id) => {
     fetch(`http://localhost:5000/api/products/${id}`, { method: 'DELETE' })
       .then(() => fetchProducts())
-      .catch(err => console.error('Ошибка удаления:', err));
+      .catch(err => console.error('Deleting error:', err));
   };
 
   // Начать редактирование
@@ -53,14 +53,13 @@ const AdminPanel = () => {
         fetchProducts();
         setEditingProduct(null);
       })
-      .catch(err => console.error('Ошибка обновления:', err));
+      .catch(err => console.error('Updating error:', err));
   };
 
   return (
     <div style={{ padding: '20px' }}>
       <h1>Admin Panel</h1>
 
-      {/* Форма для добавления нового товара */}
       <h2>Add New Product</h2>
       <input
         type="text"
@@ -88,7 +87,6 @@ const AdminPanel = () => {
       />
       <button onClick={handleCreate}>Add Product</button>
 
-      {/* Список товаров */}
       <h2>Products</h2>
       <ul>
         {products.map(product => (

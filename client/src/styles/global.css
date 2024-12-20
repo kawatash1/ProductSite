@@ -121,6 +121,10 @@ a{
     margin-top: 5px; /* Добавим немного пространства между картинкой и текстом */
   }
 
+#CartList li{
+  padding-right: 30px;
+}
+
 
 form{
     display: flex;
